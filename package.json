@@ -1,0 +1,24 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "Nossa biblioteca do curso JS com TDD na pratica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianosilvareis/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Adriano Reis <adriano_silvareis@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianosilvareis/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/adrianosilvareis/js-tdd-course#readme"
+}
