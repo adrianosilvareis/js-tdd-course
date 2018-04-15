@@ -7,7 +7,7 @@
     "build": "webpack --colors --progress",
     "watch": "npm rum build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run test:covarage",
+    "prepush": "npm run lint && npm run test:covarage",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js -w --require babel-register",
     "test:covarage": "nyc npm test"
   },
