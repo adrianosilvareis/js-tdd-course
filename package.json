@@ -7,11 +7,13 @@
     "build": "webpack --colors --progress",
     "watch": "npm rum build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
+    "prepush": "npm run lint && npm run test:covarage",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js -w --require babel-register",
     "test:covarage": "nyc npm test"
   },
   "nyc":{
+    "functions":80,
+    "lines":80,
     "reporter": ["text","html"],
     "exclude": ["tests/**"]
   },
