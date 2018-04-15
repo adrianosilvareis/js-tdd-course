@@ -8,4 +8,8 @@ function foo(){
   return 'foo';
 };
 
+function bar(){
+  return 'bar';
+};
+
 export { sum, sub, mult, div };
