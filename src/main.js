@@ -1,7 +1,20 @@
-const name = 'adriano';
 
-function fn() {
-  return name;
+
+class Animal {
+  constructor(kind, sound) {
+    this.kind = kind;
+    this.sound = sound;
+  }
+
+  hello() {
+    return `${this.sound} I'm a ${this.kind}`;
+  }
+
+  static info() {
+    return 'This is a class to create animal!';
+  }
 }
 
-fn();
+const dog = new Animal('Dog', 'AuAu');
+
+dog.hello();
