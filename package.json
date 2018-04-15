@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack --colors --progress",
     "watch": "npm rum build -- --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js -w"
   },
   "repository": {
     "type": "git",
@@ -24,15 +26,12 @@
   },
   "homepage": "https://github.com/adrianosilvareis/js-tdd-course#readme",
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
-    "webpack-cli": "^2.0.14"
+    "husky": "^0.14.3",
+    "mocha": "^5.1.0"
   },
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2015-native-modules": "^6.9.4",
-    "webpack": "^4.5.0"
-  }
+  "dependencies": {}
 }
