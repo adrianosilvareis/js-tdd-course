@@ -1,30 +1,57 @@
-const expect = require('chai').expect;
+/* eslint no-unused-expressions: "off", curly: "error" */
 
-describe('Main', () => {
-  let arr;
+import { expect } from 'chai';
+import { sum, sub, mult, div } from '../src/main';
 
-  // Roda todas as vezes antes de cada teste
-  beforeEach(() => {
-    arr = [1, 2, 3];
+describe('Calc', () => {
+  // smoke tests
+  describe('Somke tests', () => {
+    it('should exist the method `sum`', () => {
+      expect(sum).to.be.exist;
+      expect(sum).to.be.a('function');
+    });
+
+    it('should exist the method `sub`', () => {
+      expect(sub).to.be.exist;
+      expect(sub).to.be.a('function');
+    });
+
+    it('should exist the method `mult`', () => {
+      expect(mult).to.be.exist;
+      expect(mult).to.be.a('function');
+    });
+
+    it('should exist the method `div`', () => {
+      expect(div).to.be.exist;
+      expect(div).to.be.a('function');
+    });
   });
 
-  it('should have a size of 4 when push another value to the array', () => {
-    arr.push(4);
-    expect(arr).to.have.lengthOf(4);
+  describe('Sum', () => {
+    it('should return 4 whe sum(2,2)', () => {
+      expect(sum(2, 2)).to.be.equal(4);
+    });
   });
 
-  it('should remove the value 3 when use pop in the array', () => {
-    arr.pop();
-    expect(arr).to.not.include(3);
+  describe('Sub', () => {
+    it('should return 4 whe Sub(6,2)', () => {
+      expect(sub(6, 2)).to.be.equal(4);
+    });
   });
 
-  it('should have a size of 2 when pop a value fron the array', () => {
-    arr.pop();
-    expect(arr).to.have.lengthOf(2);
+  describe('mult', () => {
+    it('should return 4 whe mult(2,2)', () => {
+      expect(mult(2, 2)).to.be.equal(4);
+    });
   });
 
-  it('should be an array', () => {
-    expect(arr).to.be.a('array');
-  });
+  describe('div', () => {
+    it('should return 1 whe div(2,2)', () => {
+      expect(div(2, 2)).to.be.equal(1);
+    });
 
+    it('should return `Não é possível divisão por zero!` whe div(2,0)', () => {
+      expect(div(2, 0)).to.be.equal('Não é possível divisão por zero!');
+    });
+  });
 });
